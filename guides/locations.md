@@ -2,7 +2,7 @@
 title: "Find the right city: names, countries, city ids and coordinates"
 description: "Tell SkyCast API which place you mean by city name, by name plus country code, by a city_id from city search, or by latitude and longitude — and which one wins."
 status: generated
-version: "0.1"
+version: "0.2"
 ---
 
 # Find the right city
@@ -18,7 +18,7 @@ Every weather endpoint takes a location in one of three forms: a **city name**, 
 
 ## By city name
 
-`city` accepts any spelling the geocoder knows — `München`, `Munich`, `Москва`, `São Paulo`. SkyCast uses the most relevant match, which is usually the largest city with that name.
+`city` accepts any spelling the geocoder knows — local, English or transliterated, accents and Cyrillic included (`München`, `Москва`). SkyCast uses the most relevant match, which is usually the largest city with that name.
 
 ```bash
 curl -H "X-API-Key: $SKYCAST_KEY" \
